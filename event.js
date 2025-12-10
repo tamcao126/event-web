@@ -726,3 +726,23 @@ if (document.readyState === 'loading') {
 function init() {
     // Already handled in DOMContentLoaded event listener
 }
+// Làm header trong suốt ở đầu trang
+function handleHeroHeader() {
+    const header = document.querySelector('.header');
+    if (window.scrollY < window.innerHeight - 100) {
+        header.classList.add('transparent');
+    } else {
+        header.classList.remove('transparent');
+    }
+}
+
+window.addEventListener('scroll', handleHeroHeader);
+window.addEventListener('load', handleHeroHeader);
+
+// Cập nhật background slider đúng ảnh concert (ảnh bạn chụp)
+document.querySelectorAll('.cover_item').forEach(item => {
+    item.style.backgroundImage = `
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.4)), 
+        url('https://png.pngtree.com/thumb_back/fw800/background/20241018/pngtree-aluminum-stage-truss-image_16222505.jpg')
+    `;
+});
