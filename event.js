@@ -91,7 +91,7 @@ const appData = {
             id: 1,
             name: "Sarah Johnson",
             position: "CTO at TechVision",
-            
+            image: "https://i.pinimg.com/1200x/1e/cb/a9/1ecba98ac8bfd242436a87fb0996f14d.jpg",
             bio: "AI and Machine Learning Expert"
         },
         {
