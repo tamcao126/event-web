@@ -1,12 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head> <!--new-->
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="MeetHub - Event Management Platform">
     <meta name="keywords" content="MeetHub, Event, Conference, Meetup">
     <meta name="author" content="MeetHub Team">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>MeetHub - Event Management Platform</title>
+    <!--header start here -->
+    <header class="header navbar fixed-top navbar-expand-md">
+    <div class="container">
+        <a class="navbar-brand logo" href="#">
+            <img src="assets/img/logo.png" alt="Evento">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="lnr lnr-text-align-right"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+            <ul class=" nav navbar-nav menu">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Speakers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Contact</a>
+                </li>
+                <li class="search_btn">
+                    <a href="#">
+                    <i class="ion-ios-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
     
     <!-- External Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -69,11 +106,12 @@
     </header>
 
     <!-- Hero Slider Section -->
-    <section id="home" class="home-cover">
-        <div class="cover_slider owl-carousel owl-theme" id="heroSlider">
-            <div class="cover_item" style="background-image: url('https://i.pinimg.com/1200x/71/44/6d/71446d2b5f8e5d8f7d8e5f8e5d8e5f8e.jpg');">
+<section id="home" class="home-cover">
+    <div class="cover_slider owl-carousel owl-theme" id="heroSlider">
+        <!-- Slides sẽ được JS tạo tự động, nhưng ta sẽ để 1 slide mẫu để CSS hoạt động ngay cả khi JS lỗi -->
+        <div class="cover_item" style="background-image: url('https://i.pinimg.com/1200x/71/44/6d/71446d2b5f8e5d8f7d8e5f8e5d8e5f8e.jpg');">
             <div class="slider_content">
-            <div class="container h-100">
+                <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12 text-center">
                             <h6 class="cover-title text-white text-uppercase mb-3">Prepare yourself for the</h6>
@@ -100,14 +138,13 @@
             <div class="deco-shape deco-x-3">X</div>
         </div>
     </div>
-        <dis class="cover_nav">
-            <ul class="cover_dots" id="sliderDots">
-             <!-- Dots sẽ được JS tạo -->
+
+    <div class="cover_nav">
+        <ul class="cover_dots" id="sliderDots">
+            <!-- Dots sẽ được JS tạo -->
         </ul>
     </div>
 </section>
-                
-           
 
     <!-- Event Info Section -->
     <section class="pt100 pb100" id="eventInfo">
@@ -166,12 +203,37 @@
         <div class="container">
             <div class="section_title mb50">
                 <h3 class="title">
-                   Our Speakers
+                Our Speakers
                 </h3>
             </div>
         </div>
         <div class="row justify-content-center no-gutters" id="speakersGrid">
             <!-- Speakers will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Ticket Pricing Section -->
+    <section class="pb100" id="pricing">
+        <div class="container">
+            <div class="section_title mb50">
+                <h3 class="title">
+                Ticket Pricing
+                </h3>
+            </div>
+            <div class="row justify-content-center" id="pricingCards">
+                <!-- Pricing cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Calendar -->
+    <section class="pb100" id="events">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="event_calender table" id="eventCalendar">
+                    <!-- Calendar will be populated by JavaScript -->
+                </table>
+            </div>
         </div>
     </section>
     <!-- OUR PARTNERS SECTION -->
@@ -215,31 +277,6 @@
         </div>
     </div>
 </section>
-
-    <!-- Ticket Pricing Section -->
-    <section class="pb100" id="pricing">
-        <div class="container">
-            <div class="section_title mb50">
-                <h3 class="title">
-                   Ticket Pricing
-                </h3>
-            </div>
-            <div class="row justify-content-center" id="pricingCards">
-                <!-- Pricing cards will be populated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Event Calendar -->
-    <section class="pb100" id="events">
-        <div class="container">
-            <div class="table-responsive">
-                <table class="event_calender table" id="eventCalendar">
-                    <!-- Calendar will be populated by JavaScript -->
-                </table>
-            </div>
-        </div>
-    </section>
 
     <!-- Get Tickets CTA -->
     <section class="bg-img pt100 pb100" style="background-image: url('https://i.pinimg.com/1200x/16/14/9e/16149e6405c4bc7516cf991f929f27e9.jpg');" id="cta">
@@ -348,3 +385,5 @@
     <script src="event.js"></script>
 </body>
 </html>
+
+
